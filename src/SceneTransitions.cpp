@@ -1,6 +1,8 @@
 #include "SceneTransitions.hpp"
 #include <raylib.h>
 #include "Data.hpp"
+#include "texturemanager.hpp"
+#include "Logger.hpp"
 
 namespace SceneTransition
 {
@@ -8,31 +10,42 @@ namespace SceneTransition
     float timeleft = 0;
     bool overlay = true;
     Scenes _scene;
+
     void transitioncallbacks()
     {
         if (transitioning)
         {
-            if (timeleft < 0)
+            timeleft = timeleft - GetFrameTime();
+
+            if (timeleft <= 0)
             {
                 transitioning = false;
                 timeleft = 0;
                 Data::currentscene = _scene;
                 overlay = true;
                 return;
-            }else {
-                timeleft = timeleft - GetFrameTime();
             }
-            if (overlay)
+            if (_scene == mainmenu)
             {
-                DrawRectangle(0,0,Data::windowsize.x,Data::windowsize.y,{0,0,0,128});
+                Texture2D* tex = Textures::Utils::GrabTexture(Winner);
+                if (tex && tex->id != 0)
+                {
+                    Rectangle src = { 0, 0, (float)tex->width, (float)tex->height };
+                    Rectangle dst = { 20, 20, (float)tex->width, (float)tex->height };
+                    DrawTexturePro(*tex, src, dst, { 0, 0 }, 0, WHITE);
+                }
             }
         }
-        return;
     }
 
-    void changescene(Scenes scene,float time,bool showoverlay)
+    void changescene(Scenes scene, float time, bool showoverlay)
     {
-        Data::currentscene = scene;
-        return;
+        if (!transitioning) 
+        {
+            _scene = scene;
+            timeleft = time;
+            overlay = showoverlay;
+            transitioning = true;
+        }
     }
 }

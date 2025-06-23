@@ -52,7 +52,6 @@ namespace Input
         {
             if (!SceneTransition::transitioning)
             {
-                
                 if (Data::tick % 6 == 0)
                 {
                     if (IsKeyDown(KEY_S))

@@ -51,14 +51,15 @@ namespace RayTiled
 
     const TileSheet* FindSheetForId(uint16_t id, const TileMap& map)
     {
-        for (const auto& [startId, sheet] : map.TileSheets)
+        for (std::map<uint16_t, TileSheet>::const_iterator it = map.TileSheets.begin(); it != map.TileSheets.end(); ++it)
         {
+            const TileSheet& sheet = it->second;
             if (sheet.HasId(id))
                 return &sheet;
         }
-
         return nullptr;
     }
+
 
     static size_t TilesDrawn = 0;
 

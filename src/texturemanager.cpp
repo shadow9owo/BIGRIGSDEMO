@@ -101,6 +101,7 @@ namespace Textures {
         void LoadTextureById(Textureid id) {
             if (IsIdLoaded(id)) return;
 
+            Texture2D* tmppoint = new Texture2D();
             Texture2D text2dspritesheet;
             text2dspritesheet = LoadTexture("./assets/tilesforplains.png");
 
@@ -129,372 +130,379 @@ namespace Textures {
 
                     break;
                 }
-                case Collision:
-                {
-                    Texture2D* tmppoint = new Texture2D();
+                case Collision: {
+                    
                     *tmppoint = LoadTexture("./assets/collision.png");
                     Data::texturedict.insert({ tmppoint, id }); 
+                    break;
                 }
-                case Winner:
-                {
-                    Texture2D* tmppoint = new Texture2D();
+                case Winner: {
+                    
                     *tmppoint = LoadTexture("./assets/winner.png");
                     Data::texturedict.insert({ tmppoint, id }); 
+                    break;
                 }
                 case PLAINS_Plain_empty: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/tilesetforplains.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case PLAINS_Road_0deg: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/tilesetforplains.png");
                     Data::texturedict.insert({ tmppoint, id }); 
                     break;
                 }
                 case PLAINS_Road_Turn: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/tilesetforplains.png");
                     Data::texturedict.insert({ tmppoint, id }); 
                     break;
                 }
                 case PLAINS_Road_90deg: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/tilesetforplains.png");
                     Data::texturedict.insert({ tmppoint, id }); 
                     break;
                 }
                 case PLAINS_Plain_Grass: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/tilesetforplains.png");
                     Data::texturedict.insert({ tmppoint, id }); 
                     break;
                 }
                 case PLAINS_Treetop: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/tilesetforplains.png");
                     Data::texturedict.insert({ tmppoint, id }); 
                     break;
                 }
                 case PLAINS_Treebot: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/tilesetforplains.png");
                     Data::texturedict.insert({ tmppoint, id }); 
                     break;
                 }
                 case PLAINS_Tree2top: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/tilesetforplains.png");
                     Data::texturedict.insert({ tmppoint, id }); 
                     break;
                 }
                 case PLAINS_Tree2bot: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/tilesetforplains.png");
                     Data::texturedict.insert({ tmppoint, id }); 
                     break;
                 }
                 case UI_CORNER_FILLED: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case UI_FILLED_LINE: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case UI_BG_FILLED: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case UI_CORNER_EMPTY_BR: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case UI_CORNER_ROUND_EMPTY_1: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case UI_CORNER_ROUND_EMPTY_2: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case UI_VERT_EMPTY: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case UI_VERT_END: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case UI_SLAB: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case UI_HORIZONTAL: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case UI_SHARP_EDGE: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case UI_SHORT_BLOCKY_TURN: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case UI_CORNER_BLOCKY2: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_R: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_S: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_1: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_Q: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_T: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_2: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_P: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_U: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_3: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_N: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_O: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_V: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_4: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_F: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_M: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_W: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_5: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_C: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_E: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_G: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_L: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_X: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_6: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_A: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_H: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_K: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_Y: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_7: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_B: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_D: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_I: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_J: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_Z: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_8: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_9: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
                 case FONT_LETTER_0: {
-                    Texture2D* tmppoint = new Texture2D();
+                    
                     *tmppoint = LoadTexture("./assets/uiset.png");
                     Data::texturedict.insert({ tmppoint, id });
                     break;
                 }
-            
+                default: {
+                    break;
+				}
+            }
             UnloadTexture(text2dspritesheet);
-        }
         }
 
         bool LoadAll() {
+            if (!DirectoryExists("./assets"))
+            {
+                Data::running = false;
+                return false;
+            }
             for (size_t i = 0; i < 64; i++)
             {
                 try
@@ -643,6 +651,11 @@ namespace Textures {
     }
 
     bool _LoadTextures() {
+        if (!DirectoryExists("./assets"))
+        {   
+            Data::running = false;
+            return false;
+        }
         if (availiblevramMBs() < 128) {
             Utils::LoadAllInScene(Data::currentscene);
         } else {

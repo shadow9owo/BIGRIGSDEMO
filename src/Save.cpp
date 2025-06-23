@@ -17,6 +17,7 @@ namespace Save
         }
         return;
     }
+
     void init()
     {
         SmartTDB::DeclareDBname("sav");

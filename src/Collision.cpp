@@ -17,6 +17,7 @@ namespace Collisions
 
     bool collides(RayTiled::TileMap &map) // timer loop
     {
+        //map.get
         if (timer <= 0)
         {
             timer = 0.05f;
@@ -68,11 +69,13 @@ namespace Collisions
                 {
                     if (Vector2Distance({88,201}, Data::Player.CarPosition) < 30)
                     {
-                        if (Data::lap >= 3)
+                        if (Data::lap == 3)
                         {
                             if (Data::pbscore < getscore())
+                            {
                                 Data::pbscore = getscore();
-                            SceneTransition::changescene(Scenes::mainmenu,3,false);
+                            }
+                            SceneTransition::changescene(Scenes::mainmenu, 2.5f, true);
                             won = true;
                             return;
                         }
